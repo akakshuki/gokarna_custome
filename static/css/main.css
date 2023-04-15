@@ -431,7 +431,7 @@ table td {
   /* Prevent long strings from overflowing */
   overflow-wrap: break-word;
 }
-.post .post-date, .prev-post-date, .next-post-datez {
+.post .post-date, .prev-post-date, .next-post-date {
   color: gray;
 }
 .post .post-content {
