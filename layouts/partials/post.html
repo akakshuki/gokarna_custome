@@ -19,6 +19,9 @@
         </p>
         {{ if .Site.DisqusShortname }}
         <div class="post-comments">
+            {{ if .Site.Params.customFootHTML }}
+                {{ .Site.Params.customFootHTML | safeHTML }}
+            {{ end }}
             {{ template "_internal/disqus.html" . }}
         </div>
         {{ end }}
