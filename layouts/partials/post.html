@@ -19,14 +19,15 @@
         </p>
         {{ if .Site.DisqusShortname }}
         <div class="post-comments">
-            {{ if .Site.Params.customFootHTML }}
-                {{ .Site.Params.customFootHTML | safeHTML }}
-            {{ end }}
             {{ template "_internal/disqus.html" . }}
         </div>
         {{ end }}
     </div>
-
+    <div class="custom-post-footer">
+        {{ if .Site.Params.customPostFootHTML }}
+            {{ .Site.Params.customPostFootHTML | safeHTML }}
+        {{ end }}
+    </div>
     <div class="prev-next">
         {{ if eq .Site.Params.TogglePreviousAndNextButtons "true" }}
             {{ if or .PrevInSection .NextInSection }}
